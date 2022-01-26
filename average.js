@@ -20,7 +20,7 @@ for (var i = 1; i < credit.length; i++) {
         majority_credit += Number(credit[i].innerText) * Number(score[i].innerText);
         majority_GPA += Number(credit[i].innerText);
         if (subject[i].innerText == "CSC00004")
-            CSC00004 = Number(score[i].innerText;
+            CSC00004 = Number(score[i].innerText);
     }
     _credit_ += Number(credit[i].innerText) * Number(score[i].innerText);
     _GPA_ += Number(credit[i].innerText);
