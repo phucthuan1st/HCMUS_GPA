@@ -17,23 +17,22 @@ for (var i = 1; i < credit.length; i++) {
         continue;
     } else if (subject[i].innerText.includes("CSC")) {
         //Change CSC to suitable code, ex: PHY, MTH,...
-        majority_credit += Number(credit[i].innerText) * Number(score[i].innerText);
-        majority_GPA += Number(credit[i].innerText);
+        majority_GPA += Number(credit[i].innerText) * Number(score[i].innerText);
+        majority_credit += Number(credit[i].innerText);
         if (subject[i].innerText == "CSC00004")
             CSC00004 = Number(score[i].innerText);
     }
-    _credit_ += Number(credit[i].innerText) * Number(score[i].innerText);
-    _GPA_ += Number(credit[i].innerText);
+    _GPA_ += Number(credit[i].innerText) * Number(score[i].innerText);
+    _credit_ += Number(credit[i].innerText);
 }
 
-console.log("Number of credit / Tong so tin chi: " + _GPA_);
-console.log("GPA / Diem trung binh: " + Math.round(_credit_ / _GPA_ * 100)/100);
+console.log("Number of credit / Tong so tin chi: " + _credit_);
+console.log("GPA / Diem trung binh: " + Math.round(_GPA_ / _credit_ * 100)/100);
+console.log("Number of majority credit / Tong tin chi chuyen nganh: " + majority_credit);
+console.log("Majority GPA / Diem trung binh chuyen nganh: " + Math.round(majority_GPA / majority_credit * 100) /100);
 
-console.log("Include NMCNTT");
-console.log("Number of majority credit / Tong tin chi chuyen nganh: " + majority_GPA);
-console.log("Majority GPA / Diem trung binh chuyen nganh: " + Math.round(majority_credit / majority_GPA * 100) /100);
-
-console.log("Exclude NMCNTT");
+console.log("------------------------------------");
+console.log("Exclude NMCNTT / Khong tinh NMCNTT");
 majority_credit -= 4;
 majority_GPA -= CSC00004;
 console.log("Number of majority credit / Tong tin chi chuyen nganh: " + majority_GPA);
