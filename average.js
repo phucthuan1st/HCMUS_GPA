@@ -1,27 +1,28 @@
-var tinchi = document.querySelectorAll("td:nth-child(3)");
-var monhoc = document.querySelectorAll("td:nth-child(2)");
-var diem = document.querySelectorAll("td:nth-child(6)");
+var credit = document.querySelectorAll("td:nth-child(3)");
+var subject = document.querySelectorAll("td:nth-child(2)");
+var score = document.querySelectorAll("td:nth-child(6)");
 
-var credit = 0,
-    GPA = 0; //GPA
+var _credit_ = 0,
+    _GPA_ = 0; //GPA
 var majority_credit = 0,
     majority_GPA = 0; //Majority
 
-for (var i = 1; i < tinchi.length; i++) {
-    if (monhoc[i].innerText.includes("Thể dục") ||
-        monhoc[i].innerText.includes("Anh văn") ||
-        monhoc[i].innerText.includes("Giáo dục") ||
-        Number(diem[i].innerText) < 5) {
+for (var i = 1; i < credit.length; i++) {
+    if (subject[i].innerText.includes("Thể dục") ||
+        subject[i].innerText.includes("Anh văn") ||
+        subject[i].innerText.includes("Giáo dục") ||
+        subject[i].innerText.includes("Tin học") ||
+        Number(score[i].innerText) < 5) {
         continue;
-    } else if (monhoc[i].innerText.includes("CSC")) {
+    } else if (subject[i].innerText.includes("CSC")) {
         //Change CSC to suitable code, ex: PHY, MTH,...
-        majority_credit += Number(tinchi[i].innerText) * Number(diem[i].innerText);
-        majority_GPA += Number(tinchi[i].innerText);
+        majority_credit += Number(credit[i].innerText) * Number(score[i].innerText);
+        majority_GPA += Number(credit[i].innerText);
     }
-    credit += Number(tinchi[i].innerText) * Number(diem[i].innerText);
-    GPA += Number(tinchi[i].innerText);
+    _credit_ += Number(credit[i].innerText) * Number(score[i].innerText);
+    _GPA_ += Number(credit[i].innerText);
 }
-console.log("Number of credit: " + GPA);
-console.log("GPA: " + credit / GPA);
+console.log("Number of credit: " + _GPA_);
+console.log("GPA: " + _credit_ / _GPA_);
 console.log("Number of majority credit: " + majority_GPA);
 console.log("Majority GPA: " + majority_credit / majority_GPA);
