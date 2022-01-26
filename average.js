@@ -33,7 +33,7 @@ console.log("Include NMCNTT");
 console.log("Number of majority credit / Tong tin chi chuyen nganh: " + majority_GPA);
 console.log("Majority GPA / Diem trung binh chuyen nganh: " + Math.round(majority_credit / majority_GPA * 100) /100);
 
-console.log("Exclude NMCNTT")
+console.log("Exclude NMCNTT");
 majority_credit -= 4;
 majority_GPA -= CSC00004;
 console.log("Number of majority credit / Tong tin chi chuyen nganh: " + majority_GPA);
