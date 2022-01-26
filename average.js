@@ -12,6 +12,7 @@ for (var i = 1; i < credit.length; i++) {
         subject[i].innerText.includes("Anh văn") ||
         subject[i].innerText.includes("Giáo dục") ||
         subject[i].innerText.includes("Tin học") ||
+        subject[i].innerText.includes("Nhập môn") ||
         Number(score[i].innerText) < 5) {
         continue;
     } else if (subject[i].innerText.includes("CSC")) {
