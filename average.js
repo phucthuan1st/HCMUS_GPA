@@ -22,7 +22,7 @@ for (var i = 1; i < credit.length; i++) {
     _credit_ += Number(credit[i].innerText) * Number(score[i].innerText);
     _GPA_ += Number(credit[i].innerText);
 }
-console.log("Number of credit: " + _GPA_);
-console.log("GPA: " + _credit_ / _GPA_);
-console.log("Number of majority credit: " + majority_GPA);
-console.log("Majority GPA: " + majority_credit / majority_GPA);
+console.log("Number of credit / Tong so tin chi: " + _GPA_);
+console.log("GPA / Diem trung binh: " + _credit_ / _GPA_);
+console.log("Number of majority credit / Tong tin chi chuyen nganh: " + majority_GPA);
+console.log("Majority GPA / Diem trung binh chuyen nganh: " + majority_credit / majority_GPA);
