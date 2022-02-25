@@ -4,6 +4,7 @@ var score = document.querySelectorAll("td:nth-child(6)");
 
 var _credit_ = 0,
     _GPA_ = 0; //GPA
+
 var majority_credit = 0,
     majority_GPA = 0,
     CSC00004 = 0; //Majority
@@ -26,6 +27,7 @@ for (var i = 1; i < credit.length; i++) {
     _credit_ += Number(credit[i].innerText);
 }
 
+console.log("------------------------------------");
 console.log("Number of credit / Tong so tin chi: " + _credit_);
 console.log("GPA / Diem trung binh: " + Math.round(_GPA_ / _credit_ * 100) / 100);
 console.log("Number of majority credit / Tong tin chi chuyen nganh: " + majority_credit);
