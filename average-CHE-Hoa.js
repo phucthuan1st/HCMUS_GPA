@@ -8,7 +8,7 @@ var _credit_ = 0,
 
 // Trung binh chuyen nganh hoac CSN
 var majority_credit = 0,
-    majority_GPA = 0,
+    majority_GPA = 0;
 
 for (var i = 1; i < credit.length; i++) {
     if (subject[i].innerText.includes("Thể dục") ||
