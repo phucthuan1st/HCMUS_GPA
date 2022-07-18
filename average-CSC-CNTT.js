@@ -18,8 +18,8 @@ for (var i = 1; i < credit.length; i++) {
         continue;
     } else if (subject[i].innerText.includes("CSC")) {
         //Change CSC to suitable code, ex: PHY, MTH,...
-        majority_GPA += Number(credit[i].innerText) * Number(score[i].innerText);
-        majority_credit += Number(credit[i].innerText);
+        majority_GPA += Number(score[i].innerText);
+        majority_credit += 1
         if (subject[i].innerText.includes("CSC00004"))
             CSC00004 = Number(score[i].innerText);
     }
@@ -35,7 +35,7 @@ console.log("Majority GPA / Diem trung binh chuyen nganh: " + Math.round(majorit
 
 console.log("------------------------------------");
 console.log("Exclude NMCNTT / Khong tinh NMCNTT");
-majority_credit -= 4;
-majority_GPA -= CSC00004 * 4;
+majority_credit -= 1;
+majority_GPA -= CSC00004;
 console.log("Number of majority credit / Tong tin chi chuyen nganh: " + majority_credit);
 console.log("Majority GPA / Diem trung binh chuyen nganh: " + Math.round(majority_GPA / majority_credit * 100) / 100);
