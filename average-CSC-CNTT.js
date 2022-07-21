@@ -27,6 +27,7 @@ for (var i = 1; i < credit.length; i++) {
     _credit_ += Number(credit[i].innerText);
 }
 
+console.clear()
 console.log("------------------------------------");
 console.log("Number of credit / Tong so tin chi: " + _credit_);
 console.log("GPA / Diem trung binh: " + Math.round(_GPA_ / _credit_ * 100) / 100);
